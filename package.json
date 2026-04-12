@@ -1,6 +1,6 @@
 {
 	"name": "bigmotor_lang",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Bigmotor language compiler and interpreter (Brainfuck derivative)",
 	"type": "module",
 	"license": "WTFPL",
