@@ -57,4 +57,4 @@ bigmotor-compile hello.bm
 
 ## License
 
-MIT
+WTFPL
