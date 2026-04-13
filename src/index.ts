@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { readFile } from 'node:fs/promises';
 import { extname } from 'node:path';
 import { parse } from './parser';
@@ -7,18 +8,21 @@ export { parse } from './parser';
 export { interpret } from './interpreter';
 
 /**
- * Bigmotor CLI
+ * Bigmotor language unified CLI
  */
 async function main() {
 	const args = process.argv.slice(2);
 	const filePath = args.filter((arg) => !arg.startsWith('--'))[0];
 
 	if (!filePath) {
-		console.log('Usage: bigmotor <file.bm|file.bigmotor> [--compile]');
+		console.log('Usage: bigmotor_lang <file.bm|file.bigmotor> [options]');
+		console.log('\nOptions:');
+		console.log('  --transpile, --compile, -T, -C   Output Brainfuck code instead of executing');
 		return;
 	}
 
-	const isCompileMode = args.includes('--compile');
+	const isCompileMode =
+		args.includes('--compile') || args.includes('--transpile') || args.includes('-T') || args.includes('-C');
 
 	// Check file extension
 	const ext = extname(filePath);
