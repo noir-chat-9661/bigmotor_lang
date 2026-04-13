@@ -1,6 +1,6 @@
 {
 	"name": "bigmotor_lang",
-	"version": "1.0.1",
+	"version": "1.1.0",
 	"description": "Bigmotor language compiler and interpreter (Brainfuck derivative)",
 	"type": "module",
 	"license": "WTFPL",
@@ -23,10 +23,10 @@
 		}
 	},
 	"bin": {
-		"bigmotor": "./dist/bin/bigmotor.js",
-		"bigmotor-compile": "./dist/bin/bmc.js",
-		"bmr": "./dist/bin/bigmotor.js",
-		"bmc": "./dist/bin/bmc.js"
+		"bigmotor": "dist/bin/bigmotor.js",
+		"bigmotor-compile": "dist/bin/bmc.js",
+		"bmr": "dist/bin/bigmotor.js",
+		"bmc": "dist/bin/bmc.js"
 	},
 	"scripts": {
 		"build": "tsup",
